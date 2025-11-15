@@ -6,7 +6,7 @@
 
 ## Step 2
 ### install cubic 
-```sudo apt-add-repository universe```
-```sudo apt-add-repository ppa:cubic-wizard/release```
-```sudo apt update```
-```sudo apt install cubic```
+1. ```sudo apt-add-repository universe```
+2. ```sudo apt-add-repository ppa:cubic-wizard/release```
+3. ```sudo apt update```
+4. ```sudo apt install cubic```
