@@ -1,4 +1,4 @@
-# Project-Remasterin-Ubuntu
+# Project-Remasterin-Linux Mint
 
 ## Step 1 Lakukan Pembaruan pertama kali install
 ```sudo apt update && sudo apt upgrade -y```
