@@ -1,4 +1,4 @@
-# Project-Remasterin-Linux Mint
+# Project-Remastering-Pengembangan LOS
 
 ## Step 1 Lakukan Pembaruan pertama kali install
 ```sudo apt update && sudo apt upgrade -y```
