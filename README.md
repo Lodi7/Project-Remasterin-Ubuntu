@@ -18,7 +18,7 @@
 1. `sudo nano /etc/default/grub`
 2. Cari GRUB_CMDLINE_LINUX_DEFAULT
 3. Edit isinya menjadi GRUB_CMDLINE_LINUX_DEFAULT="quiet splash loglevel=3 panic=10 fsck.mode=auto fsck.repair=yes"
-   **Note** : Jika tidak menggunakan cubic dan langsung merubahnya di kernel lakukan `sudo update-grub` lalu `sudo reboot`
+- **Note** : Jika tidak menggunakan cubic dan langsung merubahnya di kernel lakukan `sudo update-grub` lalu `sudo reboot`
 
 ## Step 4 install aplikasi yang dibutuhkan
 
