@@ -25,25 +25,25 @@
 ### Install python
 
 1. `sudo apt install -y python3 python3-pip python3-venv`
-   **Note** : Cek apakah sudah terinstall dengan benar menggunakan `python3 --version` dan `pip3 --version`
+- **Note** : Cek apakah sudah terinstall dengan benar menggunakan `python3 --version` dan `pip3 --version`
 
 ### Install GCC
 
 1. `sudo apt install -y build-essential`
-   **Note** : Cek apakah sudah terinstall dengan benar menggunakan `gcc --version`,`g++ --version`, dan `make --version`
+- **Note** : Cek apakah sudah terinstall dengan benar menggunakan `gcc --version`,`g++ --version`, dan `make --version`
 
 ### Install OpenJDK
 
 1. Cek versi Java yang tersedia `apt search -jdk --names-only`
 2. Lalu install sesuai dengan versi yang di inginkan `sudo apt install -y openjdk-xx-jdk`
-   **Note** : Cek apakah sudah terinstall dengan benar menggunakan `java -version` dan `javac -version`
+- **Note** : Cek apakah sudah terinstall dengan benar menggunakan `java -version` dan `javac -version`
 
 ### Install Node.Js
 
 1. Jika curl belum terinstall `sudo apt-get install curl`
 2. Jika sudah ada langsung `curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -`
 3. `sudo apt-get install nodejs`
-   **Note** : Cek apakah sudah terinstall dengan benar menggunakan `node -v` dan `npm -v`
+- **Note** : Cek apakah sudah terinstall dengan benar menggunakan `node -v` dan `npm -v`
 
 ### Install Vscode
 
@@ -55,7 +55,7 @@
 4. Tambahkan repositori Visual Studio Code `echo "deb [arch=amd64,arm64,armhf signed-by=/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/code stable main" | sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null`
 5. Jalankan `sudo apt update` untuk memperbarui daftar paket
 6. Install Vscode `sudo apt install code`
-   **Note** : Cek apakah sudah terinstall dengan benar menggunakan `code ---version`
+- **Note** : Cek apakah sudah terinstall dengan benar menggunakan `code ---version`
 
 #### Penginstallan extension
 
@@ -73,7 +73,7 @@ sebentar
    - `git config --system core.editor "code --wait"`
    - `git config --system init.defaultBranch main`
    - `git config --system pull.rebase false`
-     **Note** : Cek apakah sudah terinstall dengan benar menggunakan `git --version`
+- **Note** : Cek apakah sudah terinstall dengan benar menggunakan `git --version`
 
 ### Install Docker
 
@@ -87,7 +87,7 @@ sebentar
 8. Jalankan Docker tanpa sudo (opsional)
    - `sudo groupadd docker`
    - `usermod -aG docker $USER`
-     **Note** : Cek apakah sudah terinstall dengan benar menggunakan `docker --version` dan `docker composer version`
+- **Note** : Cek apakah sudah terinstall dengan benar menggunakan `docker --version` dan `docker composer version`
 
 ## Step 5 Hapus aplikasi bawaan (bloatware) yang tidak digunakan atau tidak relevan
 
@@ -104,11 +104,10 @@ sebentar
    - zip gunakan `unzip nama-theme.zip -d nama-theme`
    - tar.gz gunakan `tar -xvf nama-theme.tar.gz`
 3. Pindahkan ke folder global
-
-- Untuk GTK/Windows Manager Theme gunakan `sudo mv nama-theme /usr/share/themes/`
-- Untuk Icons dan Cursor gunaka `sudo mv nama-theme /usr/share/icons`
-- Untuk Wallpaper atau Background gunakan `sudo mv nama-bg /usr/share/backgrounds`
-  **Note** : Pastikan sebelumnya kalian sudah di folder tempat tema yang kalian download dengan `cd ~/path-folder-tema`
+  - Untuk GTK/Windows Manager Theme gunakan `sudo mv nama-theme /usr/share/themes/`
+  - Untuk Icons dan Cursor gunaka `sudo mv nama-theme /usr/share/icons`
+  - Untuk Wallpaper atau Background gunakan `sudo mv nama-bg /usr/share/backgrounds`
+- **Note** : Pastikan sebelumnya kalian sudah di folder tempat tema yang kalian download dengan `cd ~/path-folder-tema`
 
 ### Mengatur Xfce untuk pakai tema
 
@@ -123,8 +122,8 @@ sebentar
   `xfconf-query -c xsettings -p /Gtk/CursorSize -s 24`
 - Wallpaper
   `xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/last-image -s "/usr/share/backgrounds/name-bg.jpg"`
-  **Note** : Jika sudah lakukan `xfdesktop --reload` dan `xfce4-panel -r` agar tema tadi diterapkan
-  **Tambahan** : Jika tidak tau nama tema yang akan digunakan bisa lakukan `ls /usr/share/path-nya/`
+- **Note** : Jika sudah lakukan `xfdesktop --reload` dan `xfce4-panel -r` agar tema tadi diterapkan
+- **Tambahan** : Jika tidak tau nama tema yang akan digunakan bisa lakukan `ls /usr/share/path-nya/`
 
 ## Step 7 Merubah tampilan splash screen dan logo animasi booting
 
@@ -137,13 +136,15 @@ sebentar
 3. Pindahkan ke folder plymouth `sudo mv nama-plymouth /usr/share/plymouth/themes/`
 4. Cek isi folder (opsional) `ls /usr/share/plymouth/themes/nama-plymouth`
 5. Set tema plymouth baru dengan `sudo plymouth-set-default-theme nama-plymouth -R`
-   **Note** : Pastikan sebelumnya kalian sudah di folder tempat plymouth yang kalian siapkan dengan `cd ~/path-folder-plymouth `
-   **Tambahan** : Jika ingin tes tema plymouth tanpa reboot bisa lakukan `sudo plymouthd` `sudo plymouthd --show-splash` `sudo pkill plymouthd`
+- **Note** : Pastikan sebelumnya kalian sudah di folder tempat plymouth yang kalian siapkan dengan `cd ~/path-folder-plymouth `
+- **Tambahan** : Jika ingin tes tema plymouth tanpa reboot bisa lakukan `sudo plymouthd` `sudo plymouthd --show-splash` `sudo pkill plymouthd`
 
 ### Login screen logo
 
 1. Siapkan logo yang ingin digunakan
 2. Backup logo lama (opsional) `sudo cp /usr/share/plymouth/nama-logo-distro.png{,.bak}`
 3. Lalu ganti dengan logo yang disiapkan `sudo cp ~/pathfolder/nama-logo.png /usr/share/plymouth/nama-logo-distro.png`
+
+## Step 8 Skrip Otomatis
 
 ## Step 8 Menambahkan Skrip Otomatis
