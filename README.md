@@ -111,16 +111,16 @@ sebentar
 
 ### Mengatur Xfce untuk pakai tema
 
-- GTK Theme
-  ```xfconf-query -c xsettings -p /Net/ThemeName -s "nama-theme"```
-- Windows Manager Theme
+#### GTK Theme
+  `xfconf-query -c xsettings -p /Net/ThemeName -s "nama-theme"`
+#### Windows Manager Theme
   `xfconf-query -c xfwm4 -p /general/theme -s "nama-theme"`
-- Icons Theme (Jika Ada)
+#### Icons Theme (Jika Ada)
   `xfconf-query -c xsettings -p /Net/IconThemeName -s "nama-theme"`
-- Cursor Theme (Jika Ada)
-  `xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "nama-theme"`
-  `xfconf-query -c xsettings -p /Gtk/CursorSize -s 24`
-- Wallpaper
+#### Cursor Theme (Jika Ada)
+  ```xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "nama-theme"```
+  ```xfconf-query -c xsettings -p /Gtk/CursorSize -s 24```
+#### Wallpaper
   `xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/last-image -s "/usr/share/backgrounds/name-bg.jpg"`
 - **Note** : Jika sudah lakukan `xfdesktop --reload` dan `xfce4-panel -r` agar tema tadi diterapkan
 - **Tambahan** : Jika tidak tau nama tema yang akan digunakan bisa lakukan `ls /usr/share/path-nya/`
