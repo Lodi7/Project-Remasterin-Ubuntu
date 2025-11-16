@@ -112,7 +112,7 @@ sebentar
 ### Mengatur Xfce untuk pakai tema
 
 - GTK Theme
-  `xfconf-query -c xsettings -p /Net/ThemeName -s "nama-theme"`
+  ```xfconf-query -c xsettings -p /Net/ThemeName -s "nama-theme"```
 - Windows Manager Theme
   `xfconf-query -c xfwm4 -p /general/theme -s "nama-theme"`
 - Icons Theme (Jika Ada)
