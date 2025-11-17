@@ -71,9 +71,9 @@ Jadi satu dengan skrip otomatis
 
 1. `sudo apt install -y git gitk git-gui`
 2. Atur konfigurasi git
-   - `git config --system core.editor "code --wait"`
-   - `git config --system init.defaultBranch main`
-   - `git config --system pull.rebase false`
+   - `sudo git config --system core.editor "code --wait"`
+   - `sudo git config --system init.defaultBranch main`
+   - `sudo git config --system pull.rebase false`
 - **Note** : Cek apakah sudah terinstall dengan benar menggunakan `git --version`
 
 ### Install Docker
