@@ -8,6 +8,7 @@
 sudo apt update && sudo apt upgrade -y
 
 ---
+
 ## Step 2 install cubic
 
 1. `sudo apt-add-repository universe`
