@@ -65,7 +65,7 @@
 
 #### Pengaturan konfigurasi
 
-sebentar
+Jadi satu dengan skrip otomatis 
 
 ### Install Git
 
