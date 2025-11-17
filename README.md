@@ -35,14 +35,15 @@
 ### Install OpenJDK
 
 1. Cek versi Java yang tersedia `apt search openjdk-`
-2. Lalu install sesuai dengan versi yang di inginkan `sudo apt install -y openjdk-xx-jdk`
+2. Lalu install sesuai dengan versi yang di inginkan `sudo apt install -y openjdk-17-jdk`
 - **Note** : Cek apakah sudah terinstall dengan benar menggunakan `java -version` dan `javac -version`
 
 ### Install Node.Js
 
 1. Jika curl belum terinstall `sudo apt-get install curl`
-2. Jika sudah ada langsung `curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -`
-3. `sudo apt-get install nodejs`
+2. Jika sudah ada langsung `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash`
+3. `\. "$HOME/.nvm/nvm.sh"`
+4. install node.js versi 24(lTS) `nvm 24`
 - **Note** : Cek apakah sudah terinstall dengan benar menggunakan `node -v` dan `npm -v`
 
 ### Install Vscode
