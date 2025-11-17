@@ -84,7 +84,7 @@ Jadi satu dengan skrip otomatis
 4. Tambahkan Docker's official GPG key
    - `sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc`
    - `sudo chmod a+r /etc/apt/keyrings/docker.asc`
-6. Tambahkan repositori nya ke Apt sources `echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
+6. Tambahkan repositori nya ke Apt sources `echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu jammy stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
 7. Update repository nya `sudo apt update`
 8. Install Docker package-nya `sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
 9. Jalankan Docker tanpa sudo (opsional)
