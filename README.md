@@ -159,7 +159,7 @@ sebentar
 3. Pindahkan ke folder plymouth `sudo mv nama-plymouth /usr/share/plymouth/themes/`
 4. Cek isi folder (opsional) `ls /usr/share/plymouth/themes/nama-plymouth`
 5. Set tema plymouth baru dengan `sudo plymouth-set-default-theme nama-plymouth -R`
-- **Note** : Pastikan sebelumnya kalian sudah di folder tempat plymouth yang kalian siapkan dengan `cd ~/path-folder-plymouth `
+- **Note** : Pastikan sebelumnya kalian sudah di folder tempat plymouth yang kalian siapkan dengan `cd ~/path-folder-plymouth `  atau jika di cubic **drag** & **drop** ke `cd /usr/share/plymouth/themes/`
 - **Tambahan** : Jika ingin tes tema plymouth tanpa reboot bisa lakukan `sudo plymouthd` `sudo plymouthd --show-splash` `sudo pkill plymouthd`
 
 ### Login screen logo
