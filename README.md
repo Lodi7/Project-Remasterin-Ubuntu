@@ -111,24 +111,24 @@ sebentar
   - Untuk Wallpaper atau Background gunakan `sudo mv nama-bg /usr/share/backgrounds`
 - **Note** : Pastikan sebelumnya kalian sudah di folder tempat tema yang kalian download dengan `cd ~/path-folder-tema` atau jika tidak menggunakan cubic **drag** & **drop** ke cd /usr/share/pathnya
 
-### Mengatur hak akses
+### Mengatur hak akses (opsional)
 #### GTK Theme
 - `sudo chmod -R 755 /usr/share/themes/nama-gtk-theme`
 - `sudo chown -R root:root /usr/share/themes/nama-gtk-theme`
 
-# Window Manager Theme
+#### Window Manager Theme
 - `sudo chmod -R 755 /usr/share/themes/nama-wm-theme`
 - `sudo chown -R root:root /usr/share/themes/nama-wm-theme`
 
-# Icon Theme
+#### Icon Theme
 - `sudo chmod -R 755 /usr/share/icons/nama-icon-theme`
 - `sudo chown -R root:root /usr/share/icons/nama-icon-theme`
 
-# Cursor Theme
+#### Cursor Theme
 - `sudo chmod -R 755 /usr/share/icons/nama-cursor-theme`
 - `sudo chown -R root:root /usr/share/icons/nama-cursor-theme`
 
-# Wallpaper
+#### Wallpaper
 - `sudo chmod 644 /usr/share/backgrounds/nama-wallpaper.jpg`
 - `sudo chown root:root /usr/share/backgrounds/nama-wallpaper.jpg`
 
@@ -148,6 +148,27 @@ sebentar
 - **Note** : Jika sudah lakukan `xfdesktop --reload` dan `xfce4-panel -r` agar tema tadi diterapkan
 - **Tambahan** : Jika tidak tau nama tema yang akan digunakan bisa lakukan `ls /usr/share/path-nya/`
 
+### Merubah Tema grub (opsional)
+Ada 2 cara
+#### Cara 1
+1. Siapkan grub themes yang akan digunakan
+2. Ekstra terlebih dahulu
+   - zip gunakan `unzip nama-plymouth.zip -d nama-plymouth`
+   - tar.gz gunakan `tar -xvf nama-plymouth.tar.gz`
+3. Pindahkan `mv nama-themes-grub /boot/grub/themes/` atau `cp nama-themes-grub /boot/grub/themes/`
+4. `sudo nano /etc/default/grub`
+5. Edit bagian GRUB_THEME="/boot/grub/themes/nama-themes-grub/theme.txt"
+6. Lalu simpan dan `sudo update-grub`
+7. `sudo reboot` untuk mengecek apakah sudah terpasang
+- **Note** : Jika menggunakan cubic langsung drag & drop saja tanpa `mv` atau `cp`
+
+#### Cara 2 (jika tema yang diundah terdapat install.sh dan uninstall.sh)
+1. Pastikan ada di folder tempat tema nya dengan `cd path/folder/nama-themes/`
+2. lalu berikan akses ke install.sh `chmod +x install.sh`
+3. `sudo ./install.sh` atau jika dicubic langsung tanpa sudo
+4. `sudo reboot`
+- **Note** : Jika ingin mengganti tema lakukan `./uninstall.sh` dulu dengan langkah yang sama seperti install
+  
 ## Step 7 Merubah tampilan splash screen dan logo animasi booting
 
 ### Splash Screen booting
