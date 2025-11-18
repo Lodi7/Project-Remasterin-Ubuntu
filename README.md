@@ -109,7 +109,7 @@ Jadi satu dengan skrip otomatis
 3. Pindahkan ke folder global
   - Untuk GTK/Windows Manager Theme gunakan `sudo mv nama-theme /usr/share/themes/`
   - Untuk Icons dan Cursor gunaka `sudo mv nama-theme /usr/share/icons`
-  - Untuk Wallpaper atau Background gunakan `sudo mv nama-bg /usr/share/backgrounds`
+  - Untuk Wallpaper atau Background gunakan `sudo mv nama-bg /usr/share/backgrounds` atau `sudo mv nama-bg /usr/share/xfce4/backdrops/`
 - **Note** : Pastikan sebelumnya kalian sudah di folder tempat tema yang kalian download dengan `cd ~/path-folder-tema` atau jika tidak menggunakan cubic **drag** & **drop** ke cd /usr/share/pathnya
 
 ### Mengatur hak akses (opsional)
@@ -134,7 +134,7 @@ Jadi satu dengan skrip otomatis
 - `sudo chown root:root /usr/share/backgrounds/nama-wallpaper.jpg`
 
 ### Mengatur Xfce untuk pakai tema
-
+### Cara 1 (hanya user lokal saja)
 #### GTK Theme
   `xfconf-query -c xsettings -p /Net/ThemeName -s "nama-gtk-theme"`
 #### Windows Manager Theme
@@ -146,8 +146,34 @@ Jadi satu dengan skrip otomatis
   ```xfconf-query -c xsettings -p /Gtk/CursorSize -s 24```
 #### Wallpaper
   `xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/last-image -s "/usr/share/backgrounds/nama-wallpaper.jpg"`
+
+### Cara 2 (global)
+#### Edit GTK/Icons/Cursor
+1. `sudo nano etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml`
+2. cari <property> dan edit
+   - `<property name="Net/ThemeName" type="string" value="nama-gtk-theme"/>`
+   - `<property name="Net/IconThemeName" type="string" value="nama-icons-theme"/>`
+   - `<property name="Gtk/CursorThemeName" type="string" value="nama-cursor-theme"/>`
+   - `<property name="Gtk/CursorSize" type="int" value="24"/>`
+3. `sudo mkdir -p /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/
+sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
+#### Edit WM Theme
+1. `sudo nano etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml`
+2. cari <property>
+   - `<property name="theme" type="string" value="nama-theme"/>`
+3. `sudo mkdir -p /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/
+sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
+#### Edit wallpaper 
+1. `sudo nano etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml`
+2. cari <property>
+   - `value = /usr/share/backgrounds/nama-bg.jpg` atau `value = /usr/share/xfce4/backdrops/nama-bg.jpg`
+3. lakukan
+   - `sudo mkdir -p /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
+   - `sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
+
 - **Note** : Jika sudah lakukan `xfdesktop --reload` dan `xfce4-panel -r` agar tema tadi diterapkan
-- **Tambahan** : Jika tidak tau nama tema yang akan digunakan bisa lakukan `ls /usr/share/path-nya/`
+- **Tambahan** : Jika tidak tau nama tema yang akan digunakan bisa lakukan `ls /usr/share/path-nya/` jika ingin melakukan perubahan semuanya bisa langsung - `sudo mkdir -p /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
+   - `sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/*.xml /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
 
 ### Merubah Tema grub (opsional)
 Ada 2 cara
