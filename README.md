@@ -155,14 +155,16 @@ Jadi satu dengan skrip otomatis
    - `<property name="Net/IconThemeName" type="string" value="nama-icons-theme"/>`
    - `<property name="Gtk/CursorThemeName" type="string" value="nama-cursor-theme"/>`
    - `<property name="Gtk/CursorSize" type="int" value="24"/>`
-3. `sudo mkdir -p /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/
-sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
+3. lakukan
+   - `sudo mkdir -p /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
+   - `sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
 #### Edit WM Theme
 1. `sudo nano etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml`
 2. cari <property>
    - `<property name="theme" type="string" value="nama-theme"/>`
-3. `sudo mkdir -p /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/
-sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
+3. lakukan
+   - `sudo mkdir -p /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
+   - `sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
 #### Edit wallpaper 
 1. `sudo nano etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml`
 2. cari <property>
@@ -172,7 +174,8 @@ sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml /etc/skel/.config/xf
    - `sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
 
 - **Note** : Jika sudah lakukan `xfdesktop --reload` dan `xfce4-panel -r` agar tema tadi diterapkan
-- **Tambahan** : Jika tidak tau nama tema yang akan digunakan bisa lakukan `ls /usr/share/path-nya/` jika ingin melakukan perubahan semuanya bisa langsung - `sudo mkdir -p /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
+- **Tambahan** : Jika tidak tau nama tema yang akan digunakan bisa lakukan `ls /usr/share/path-nya/` jika ingin melakukan perubahan semuanya bisa langsung
+   - `sudo mkdir -p /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
    - `sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/*.xml /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/`
 
 ### Merubah Tema grub (opsional)
